@@ -1,0 +1,77 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+main{
+  width: 960px;
+  margin: 50px auto;
+}
+
+img{
+  width: 280px;
+}
+
+.content{
+  border:1px solid #eee;
+  width: 300px;
+  padding:10px;
+  float: left;
+  margin-right: 30px;
+  position: relative;
+}
+
+.content:last-child{
+  margin-right: 0;
+}
+
+.icon{
+  color: #fff;
+  background-color: orange;
+  position: absolute;
+  padding:3px;
+  top: 0;
+  left: 0;
+}
+
+/*メディアクエリを書くときは、CSSの一番下側に書く*/
+
+@media screen and (max-width: 768px){
+  main {
+    width: 90%;
+    margin: auto;
+  }
+
+  img{
+    width:90%;
+  }
+
+  .content{
+    width: 90%;
+    display: table-cell;
+  }
+
+  .image{
+    text-align: center;
+  }
+  .content:first-child{
+    margin-top: 50px;
+    margin-right: 0;
+  }
+
+  .content:nth-last-child(2){
+    margin:20px 0;
+  }
+
+  .content:last-child{
+    margin-bottom: 50px;
+  }
+}
