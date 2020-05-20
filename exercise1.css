@@ -45,9 +45,10 @@ img{
 /*メディアクエリを書くときは、CSSの一番下側に書く*/
 
 @media screen and (max-width: 768px){
+
   main {
     width: 90%;
-    margin: auto;
+    margin:0 auto;
   }
 
   img{
@@ -56,7 +57,9 @@ img{
 
   .content{
     width: 90%;
-    display: table-cell;
+    margin:0 auto;
+    float: none;
+    display: block;
   }
 
   .image{
@@ -64,14 +67,14 @@ img{
   }
   .content:first-child{
     margin-top: 50px;
-    margin-right: 0;
   }
 
   .content:nth-last-child(2){
-    margin:20px 0;
+    margin:20px auto;
   }
 
   .content:last-child{
-    margin-bottom: 50px;
+    margin: 20px auto 50px;
   }
+
 }
